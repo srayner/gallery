@@ -25,11 +25,11 @@
         
         <main class="container">
             <div class="gallery cf">
-                <?php for($x=0; $x<10; $x++): ?>
+                <?php foreach($images as $image): ?>
                 <div class="gallery-item">
-                    <img src="gallery/images/thumbs/img_0001.jpg">
+                    <img src="<?php echo $image['thumb']; ?>">
                 </div>
-                <?php endfor; ?>
+                <?php endforeach; ?>
             </div>
         </main>
         
