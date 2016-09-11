@@ -1,0 +1,15 @@
+/* 
+    Created on : 11-Sep-2016, 14:18:22
+    Author     : Steve Rayner <srayner02@gmail.com>
+*/
+
+.gallery {
+    width: 100%;
+}
+
+.container {
+    max-width: 940px;
+    padding: 10px;
+    background: #f0f0f0;
+    margin: 0 auto;
+}
