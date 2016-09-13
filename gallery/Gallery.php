@@ -33,7 +33,7 @@ class Gallery
                 );    
             }
         }
-        return $images;
+        return count($images) ? $images : false;
         
         
     }

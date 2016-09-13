@@ -3,7 +3,7 @@
     
     $gallery = new Gallery();
     $gallery->setPath('gallery/images');
-    $images = $gallery->getImages();
+    $images = $gallery->getImages(array('jpg'));
 ?>
 
 <!DOCTYPE html>
@@ -24,13 +24,17 @@
         </header>
         
         <main class="container">
+            <?php if ($images): ?>
             <div class="gallery cf">
                 <?php foreach($images as $image): ?>
                 <div class="gallery-item">
-                    <img src="<?php echo $image['thumb']; ?>">
+                    <a href="<?php echo $image['full']; ?>"><img src="<?php echo $image['thumb']; ?>"></a>
                 </div>
-                <?php endforeach; ?>
+            <?php endforeach; ?>
             </div>
+            <?php else: ?>
+                There are no images.
+            <?php endif; ?>
         </main>
         
         <footer>
